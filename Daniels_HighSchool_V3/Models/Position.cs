@@ -13,5 +13,5 @@ public partial class Position
 
     public virtual Department Department { get; set; } = null!;
 
-    public virtual ICollection<Staff> Staff { get; set; } = new List<Staff>();
+    public virtual ICollection<StaffOverview> Staff { get; set; } = new List<StaffOverview>();
 }

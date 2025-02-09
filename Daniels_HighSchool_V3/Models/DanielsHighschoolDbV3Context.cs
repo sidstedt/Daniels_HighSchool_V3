@@ -25,7 +25,7 @@ public partial class DanielsHighschoolDbV3Context : DbContext
 
     public virtual DbSet<Position> Positions { get; set; }
 
-    public virtual DbSet<Staff> Staff { get; set; }
+    public virtual DbSet<StaffOverview> Staff { get; set; }
 
     public virtual DbSet<Student> Students { get; set; }
 
@@ -116,7 +116,7 @@ public partial class DanielsHighschoolDbV3Context : DbContext
                 .HasConstraintName("FK__Positions__Depar__398D8EEE");
         });
 
-        modelBuilder.Entity<Staff>(entity =>
+        modelBuilder.Entity<StaffOverview>(entity =>
         {
             entity.HasKey(e => e.StaffId).HasName("PK__Staff__96D4AB1718A862E6");
 
@@ -141,7 +141,7 @@ public partial class DanielsHighschoolDbV3Context : DbContext
                         .HasForeignKey("SubjectId")
                         .OnDelete(DeleteBehavior.ClientSetNull)
                         .HasConstraintName("FK__Staff_Sub__Subje__47DBAE45"),
-                    l => l.HasOne<Staff>().WithMany()
+                    l => l.HasOne<StaffOverview>().WithMany()
                         .HasForeignKey("StaffId")
                         .OnDelete(DeleteBehavior.ClientSetNull)
                         .HasConstraintName("FK__Staff_Sub__Staff__46E78A0C"),

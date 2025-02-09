@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             Menu run = new Menu();
-            run.Showmai
+            run.ShowMainMenu();
         }
     }
 }

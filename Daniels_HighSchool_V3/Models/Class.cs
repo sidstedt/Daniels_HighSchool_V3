@@ -13,7 +13,7 @@ public partial class Class
 
     public virtual ICollection<ClassSubject> ClassSubjects { get; set; } = new List<ClassSubject>();
 
-    public virtual Staff? Mentor { get; set; }
+    public virtual StaffOverview? Mentor { get; set; }
 
     public virtual ICollection<Student> Students { get; set; } = new List<Student>();
 }

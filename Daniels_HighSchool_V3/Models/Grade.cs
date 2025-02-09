@@ -17,7 +17,7 @@ public partial class Grade
 
     public DateOnly GradeDate { get; set; }
 
-    public virtual Staff Staff { get; set; } = null!;
+    public virtual StaffOverview Staff { get; set; } = null!;
 
     public virtual Student Student { get; set; } = null!;
 

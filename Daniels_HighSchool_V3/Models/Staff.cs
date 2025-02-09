@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Daniels_HighSchool_V3.Models;
 
-public partial class Staff
+public partial class StaffOverview
 {
     public int StaffId { get; set; }
 
